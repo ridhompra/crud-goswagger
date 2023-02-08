@@ -1,0 +1,48 @@
+swagger: "2.0"
+# basePath: /
+host: localhost:8080
+info:
+  version: 1.0.0
+  title: Crud Goswagger
+  description: Crud Goswagger.
+  license:
+    name: "Apache 2.0"
+    url: https://www.apache.org/licenses/LICENSE-2.0
+  contact:
+    name: Crud Goswagger
+    email: CrudGoswagger@email.com
+    url: http://localhost:8080/docs
+produces:
+  - application/json
+consumes:
+  - application/json
+schemes:
+  - http
+paths:
+  /health:
+    get:
+      tags:
+        - health check
+      summary: check server
+      operationId: getHealthCheck
+      responses:
+        "200":
+          description: success
+          schema:
+            $ref: "#/definitions/baseResponse"
+        default:
+          description: error
+          schema:
+            $ref: "#/definitions/baseResponse"
+definitions:
+  baseResponse:
+    type: object
+    properties:
+      code:
+        type: integer
+        format: int64
+      message:
+        type: string
+  baseRequest:
+    type: object
+

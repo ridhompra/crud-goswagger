@@ -1,0 +1,6 @@
+DB_DSN=root:password@tcp(localhost:3306)/gold_db?charset=utf8&parseTime=true
+DEFAULT_SIZE=10
+GENERAL_TIMEOUT=10
+HS_HOST=localhost:8080
+RESERVATION_HOST=localhost:8080
+PAYMENT_HOST=localhost:8082
